@@ -1,0 +1,53 @@
+﻿Hệ thống quản lý giảng viên của một trường đại học cần lưu trữ và tìm kiếm thông tin giảng viên cũng như là quản lý việc giảng dạy của họ bằng việc tin học hóa hệ thống thông tin.
+
+Giảng viên được chia là 3 loại: Cơ hữu (Toàn thời gian giảng dạy cho nhà trường), bán cơ hữu (giảng dạy một phần bắt buộc tại trường, không yêu cầu tham gia hoạt động khác, thỉnh giảng (chỉ giảng dạy theo lời mời, ăn lương theo tiết giảng, không bắt buộc tham gia vào việc khác).
+
+Với mỗi giảng viên nhà trường lưu trữ thông tin về: mã số, tên, ngày tháng năm sinh, học vị (Cử Nhân, Thạc Sĩ, Tiến Sĩ, Phó Giáo Sư, Giảo Sư) ngày được nhận vào trường, sơ yếu lý lịch của giảng viên đó. Trong sơ yếu lý lịch cần có họ tên, giới tính, email, điện thoại, và danh sách các bằng cấp đã có. Mỗi bằng cấp cần lưu: tên trường cấp, học vị, năm cấp.
+	
+	•Đối với giảng viên cơ hữu:  nhà trường quan tâm thêm số giờ nghĩa vụ của từng giảng viên tùy theo học vị (Kỹ Sư và Thạc Sỹ có số giờ nghĩa vụ là 460 tiết/năm, đối với Tiến Sĩ, Phó Giáo Sư, Giáo Sư là 560 tiết/năm), số giờ nghiên cứu khoa học, lương cơ bản của giảng viên đó.
+	
+	•Đối với giảng viên bán cơ hữu: Nhà trường cần lưu thông tin số tiết nghĩa vụ của giảng viên (số tiết nghĩa vụ được tính bằng 30% đối với giảng viên cơ hữu cùng chức danh)
+	
+	•Giảng viên thỉnh giảng: lưu trữ học kỳ giảng dạy, số tiết thực giảng.
+Yêu cầu
+1.Hãy vẽ sơ đồ lớp cho bài toán trên, cài đặt bài toán bằng ngôn ngữ lập trình?
+
+2.Khi tuyển dụng một giảng viên, nhà trường sẽ thêm giảng viên ấy vào danh sách đang có. Hãy viết phương thức thêm giảng viên mới này vào, phương thức trả về true nếu thêm thành công (chưa tồn tại trong danh sách) ngước lại sẽ trả về false (giảng viên đã tồn tại trong danh sách)
+
+3.Khi một giảng viên nghỉ việc, nhà trường không xóa giảng viên đó đi mà vẫn giữ lại trong danh sách, hãy đề xuất 1 cách làm để phân biệt giảng viên đó đã nghỉ việc với giảng viên còn giảng dạy? Hiện thực phương thức cho giảng viên nghỉ việc này? 
+
+4.Hãy viết phương thức tính lương tháng cho giảng viên cơ hữu và bán cơ hữu?  Biết rằng lương cơ hữu tháng bằng lương cơ bản + phụ cấp học vị (Học Vị Kỹ Sư  phụ cấp 15% lương, Thạc Sĩ thêm 30% lương cơ bản, Tiến Sĩ 50% lương cơ bản và Phó Giáo Sư, Giáo Sư thêm 70% lương cơ bản), lương bán cơ hữu không đổi như đã lưu trữ bên trên?
+(Sử dụng interface nếu là sinh viên khá, giỏi hiểu rõ)
+
+5.6 tháng 1 lần nhà trường sẽ trả thù lao giảng dạy cho giảng viên thỉnh giảng, hãy viết phương thức tính thù lao giảng dạy trong 6 tháng cho một giảng viên thỉnh giảng (biết rằng 1 tiết giảng = 100000 chưa trừ 10% thuế thu nhập cá nhân)? (Sử dụng interface nếu là sinh viên khá, giỏi)?
+
+6.Đến cuối năm nhà trường sẽ tính giờ vượt chuẩn(triết tính) để trả thù lao vượt chuẩn cho giảng viên cơ hữu, hãy viết phương thức truyền  vào số giờ giảng thực tế của giảng viên cơ hữu, tính tiền thù lao vượt chuẩn cho giảng viên cơ hữu. Biết rằng cách tính như sau:
+	-Nếu giờ giảng không lớn hơn giờ nghĩa vụ thì được tính là 0 đồng
+	-Nếu giờ vượt chuẩn nhỏ hơn giờ nghiên cứu khoa học thì được tính 0  đồng
+	-Nếu giờ vượt chuẩn lớn hơn giờ nghĩa vụ thì số giờ được tính vượt chuẩn = số giờ vượt chuẩn – giờ nghiên cứu khoa học
+	-Công thức tính tiền: tiền vượt chuẩn = số giờ được tính vượt chuẩn * 80.000 – 10% thu nhập cá nhân?
+
+7.Viết phương thức lấy ra danh sách giảng viên thỉnh giảng đã từng công tác tại trường hơn 1 năm và có học vị Tiến Sĩ trở lên?
+
+8.Viết phương thức lấy ra danh sách giảng viên Bán Cơ Hữu có học vị Thạc Sỹ trở lên và đã công tác trên 3 năm tại trường?
+
+9.Viết phương thức lấy ra danh sách giảng viên Cơ Hữu chưa có bằng Thạc Sỹ?
+
+10.Viết phương thức lấy ra danh sách giảng viên có học vị từ Thạc Sĩ trở lên?
+
+11.Viết phương thức lấy ra danh sách giảng viên cơ hữu có học vị từ Thạc Sĩ trở lên và có tên bắt đầu bằng “N”?
+
+12.Sắp xếp danh sách giảng viên cơ hữu tăng dần theo mức lương tháng?
+
+13.Sắp xếp danh sách giảng viên đã có tăng dần theo học vị (Kỹ Sư là nhỏ nhất, cao nhất là Giáo Sư)?
+
+14.Viết phương thức lấy ra danh sách giảng viên Cơ Hữu đã công tác tại trường hơn 10 năm?
+
+15.Viết phương thức truyền vào số giờ nghiên cứu khoa học mà giảng viên cơ hữu đạt được trong năm, hãy viết phương thức kiểm tra xem một giảng viên nào đó có đạt được giờ nghiên cứu khoa học hay không?
+
+16.Một giảng viên được xem là hoàn thành nhiệm vụ phải đảm bảo điều kiện: giảng đủ giờ nghĩa vụ và hoàn thành giờ nghiên cứu khoa học? Hãy viết phương thức thuyền vào số giờ thực giảng và số giờ nghiên cứu khoa học mà giảng viên đạt được trong năm học, cho biết giảng viên này hoàn thành nhiệm vụ hay không?
+
+17.Viết phương thức truyền vào số giờ thực giảng, số giờ nghiên cứu hãy lấy ra danh sách những giảng viên cơ hữu không hoàn thành nhiệm vụ?
+
+18.Ghi danh sách ở câu 11 & 12 xuống file bằng dạng text và dạng đối tượng?
+
