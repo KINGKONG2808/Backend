@@ -1,17 +1,22 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class SoYeu {
     private String hoTen;
+    private Date ngaySinh;
     private String gioiTinh;
     private String email;
     private String soDienThoai;
-    private BangCap bangCap;
+    private ArrayList<BangCap> bangCap;
 
     public SoYeu() {
     }
 
-    public SoYeu(String hoTen, String gioiTinh, String email, String soDienThoai, BangCap bangCap) {
+    public SoYeu(String hoTen, Date ngaySinh, String gioiTinh, String email, String soDienThoai, ArrayList<BangCap> bangCap) {
         this.hoTen = hoTen;
+        this.ngaySinh = ngaySinh;
         this.gioiTinh = gioiTinh;
         this.email = email;
         this.soDienThoai = soDienThoai;
@@ -24,6 +29,14 @@ public class SoYeu {
 
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
+    }
+
+    public Date getNgaySinh() {
+        return ngaySinh;
+    }
+
+    public void setNgaySinh(Date ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
     public String getGioiTinh() {
@@ -50,11 +63,11 @@ public class SoYeu {
         this.soDienThoai = soDienThoai;
     }
 
-    public BangCap getBangCap() {
+    public ArrayList<BangCap> getBangCap() {
         return bangCap;
     }
 
-    public void setBangCap(BangCap bangCap) {
+    public void setBangCap(ArrayList<BangCap> bangCap) {
         this.bangCap = bangCap;
     }
 }

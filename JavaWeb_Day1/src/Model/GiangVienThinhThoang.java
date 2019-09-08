@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Date;
+
 public class GiangVienThinhThoang extends GiangVien {
     private int hocKyDay;
     private int soTietThucDay;
@@ -7,8 +9,8 @@ public class GiangVienThinhThoang extends GiangVien {
     public GiangVienThinhThoang() {
     }
 
-    public GiangVienThinhThoang(String maSo, String ten, String ngaySinh, String hocVi, String ngayNhanVaoTruong, SoYeu soYeu, int hocKyDay, int soTietThucDay) {
-        super(maSo, ten, ngaySinh, hocVi, ngayNhanVaoTruong, soYeu);
+    public GiangVienThinhThoang(String maSo, Date ngayNhanVaoTruong, SoYeu soYeu, int hocKyDay, int soTietThucDay) {
+        super(maSo, ngayNhanVaoTruong, soYeu);
         this.hocKyDay = hocKyDay;
         this.soTietThucDay = soTietThucDay;
     }

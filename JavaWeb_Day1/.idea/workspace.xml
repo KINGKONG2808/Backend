@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0745077-b286-4608-9796-b8ddeaa0f4eb" name="Default Changelist" comment="" />
+    <list default="true" id="d0745077-b286-4608-9796-b8ddeaa0f4eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KiemTraLan1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThietKeCSDL.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Add_GiangVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Choose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_BangCap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVBanCoHuu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVCoHuu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVThinhThoang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GiangVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Input_SoYeu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienBanCoHuu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienCoHuu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienThinhThoang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Process_TinhLuong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$emTraLan1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$iết kế csdl.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiểm tra java lần 1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_BangCap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVBanCoHuu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVCoHuu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVThinhThoang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GiangVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_SoYeu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/GiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/GiangVienBanCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienBanCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/GiangVienCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/GiangVienThinhThoang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienThinhThoang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SoYeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SoYeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/QuanLyGiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/QuanLyGiangVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiết kế csdl.docx" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +61,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1QOqV2HATAznOof8gBmVxunzgrt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -48,6 +93,82 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.QuanLyGiangVien">
+    <configuration name="Input_BangCap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller.Input_BangCap" />
+      <module name="JavaWeb_Day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Input_GVBanCoHuu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller.Input_GVBanCoHuu" />
+      <module name="JavaWeb_Day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Input_GVCoHuu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller.Input_GVCoHuu" />
+      <module name="JavaWeb_Day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Input_SoYeu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller.Input_SoYeu" />
+      <module name="JavaWeb_Day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuanLyGiangVien" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Views.QuanLyGiangVien" />
+      <module name="JavaWeb_Day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QuanLyGiangVien" />
+        <item itemvalue="Application.Input_GVCoHuu" />
+        <item itemvalue="Application.Input_GVBanCoHuu" />
+        <item itemvalue="Application.Input_SoYeu" />
+        <item itemvalue="Application.Input_BangCap" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -61,10 +182,31 @@
       <workItem from="1567652011249" duration="1144000" />
       <workItem from="1567740884436" duration="1752000" />
       <workItem from="1567772490794" duration="750000" />
+      <workItem from="1567825569808" duration="2477000" />
+      <workItem from="1567848519633" duration="5454000" />
+      <workItem from="1567920855768" duration="7641000" />
+      <workItem from="1567945529689" duration="179000" />
+      <workItem from="1567945723131" duration="1371000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

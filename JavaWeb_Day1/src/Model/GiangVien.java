@@ -1,21 +1,17 @@
 package Model;
 
+import java.util.Date;
+
 public class GiangVien {
     private String maSo;
-    private String ten;
-    private String ngaySinh;
-    private String hocVi;
-    private String ngayNhanVaoTruong;
+    private Date ngayNhanVaoTruong;
     private SoYeu soYeu;
 
     public GiangVien() {
     }
 
-    public GiangVien(String maSo, String ten, String ngaySinh, String hocVi, String ngayNhanVaoTruong, SoYeu soYeu) {
+    public GiangVien(String maSo, Date ngayNhanVaoTruong, SoYeu soYeu) {
         this.maSo = maSo;
-        this.ten = ten;
-        this.ngaySinh = ngaySinh;
-        this.hocVi = hocVi;
         this.ngayNhanVaoTruong = ngayNhanVaoTruong;
         this.soYeu = soYeu;
     }
@@ -28,35 +24,11 @@ public class GiangVien {
         this.maSo = maSo;
     }
 
-    public String getTen() {
-        return ten;
-    }
-
-    public void setTen(String ten) {
-        this.ten = ten;
-    }
-
-    public String getNgaySinh() {
-        return ngaySinh;
-    }
-
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh = ngaySinh;
-    }
-
-    public String getHocVi() {
-        return hocVi;
-    }
-
-    public void setHocVi(String hocVi) {
-        this.hocVi = hocVi;
-    }
-
-    public String getNgayNhanVaoTruong() {
+    public Date getNgayNhanVaoTruong() {
         return ngayNhanVaoTruong;
     }
 
-    public void setNgayNhanVaoTruong(String ngayNhanVaoTruong) {
+    public void setNgayNhanVaoTruong(Date ngayNhanVaoTruong) {
         this.ngayNhanVaoTruong = ngayNhanVaoTruong;
     }
 
