@@ -27,6 +27,15 @@ public class Input_GiangVien {
         int year = input.nextInt();
         ngayNhanVaoTruong.setYear(year);
         giangVien.setNgayNhanVaoTruong(ngayNhanVaoTruong);
+        input.nextLine();
+
+        System.out.print("Ten giang vien        : ");
+        String ten = input.nextLine();
+        giangVien.setTen(ten);
+
+        System.out.println("----> Hoc vi hien tai <----");
+        String hocVi = Choose.luaChonHocVi();
+        giangVien.setHocVi(hocVi);
 
         System.out.println("- Nhap so yeu giang vien");
         SoYeu soYeu = Input_SoYeu.nhapSoYeu();

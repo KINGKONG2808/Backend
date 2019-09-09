@@ -9,11 +9,15 @@ public class Input_GVCoHuu extends Input_GiangVien {
         System.out.print("So gio nghia vu            : ");
         int soGioNghiaVu = input.nextInt();
         ((GiangVienCoHuu) giangVienCoHuu).setSoGioNghiaVu(soGioNghiaVu);
+        System.out.print("So gio giang thuc te       : ");
+        int soGioGiangThucTe = input.nextInt();
+        ((GiangVienCoHuu) giangVienCoHuu).setSoGioGiangThucTe(soGioGiangThucTe);
         System.out.print("So gio nghien cuu khoa hoc : ");
         int soGioNghienCuuKhoaHoc = input.nextInt();
         ((GiangVienCoHuu) giangVienCoHuu).setSoGioNghienCuuKhoaHoc(soGioNghienCuuKhoaHoc);
         System.out.print("Luong co ban               : ");
         double luongCoBan = input.nextDouble();
+        input.nextLine();
         ((GiangVienCoHuu) giangVienCoHuu).setLuongCoBan(luongCoBan);
     }
 

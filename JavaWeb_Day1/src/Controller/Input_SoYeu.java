@@ -15,7 +15,7 @@ public class Input_SoYeu {
         String hoTen = input.nextLine();
         soYeu.setHoTen(hoTen);
 
-        System.out.print("---> Ngay - Thang - Nam sinh <---");
+        System.out.println("---> Ngay - Thang - Nam sinh <---");
         Date ngaySinh = new Date();
         System.out.print("Ngay sinh  : ");
         int day = input.nextInt();
@@ -30,6 +30,7 @@ public class Input_SoYeu {
 
         String gioiTinh = Choose.luaChonGioiTinh();
         soYeu.setGioiTinh(gioiTinh);
+        input.nextLine();
 
         System.out.print("Email         : ");
         String email = input.nextLine();

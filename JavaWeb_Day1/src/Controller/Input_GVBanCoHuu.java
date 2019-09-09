@@ -11,6 +11,7 @@ public class Input_GVBanCoHuu extends Input_GiangVien {
         ((GiangVienBanCoHuu) giangVienBanCoHuu).setSoGioNghiaVu(soGioNghiaVu);
         System.out.print("Luong co ban      : ");
         double luongCoBan = input.nextDouble();
+        input.nextLine();
         ((GiangVienBanCoHuu) giangVienBanCoHuu).setLuongCoBan(luongCoBan);
     }
 

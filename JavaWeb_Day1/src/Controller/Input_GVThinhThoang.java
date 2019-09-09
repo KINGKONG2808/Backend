@@ -11,6 +11,7 @@ public class Input_GVThinhThoang extends Input_GiangVien {
         ((GiangVienThinhThoang) giangVienThinhThoang).setHocKyDay(hocKyDay);
         System.out.print("So tiet thuc day  : ");
         int soTietThucDay = input.nextInt();
+        input.nextLine();
         ((GiangVienThinhThoang) giangVienThinhThoang).setSoTietThucDay(soTietThucDay);
     }
 

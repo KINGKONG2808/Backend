@@ -2,40 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0745077-b286-4608-9796-b8ddeaa0f4eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KiemTraLan1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThietKeCSDL.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Add_GiangVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Choose.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_BangCap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVBanCoHuu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVCoHuu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GVThinhThoang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_GiangVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Input_SoYeu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienBanCoHuu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienCoHuu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienThinhThoang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Process_TinhLuong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$emTraLan1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$iết kế csdl.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/TinhLuong.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kiểm tra java lần 1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_BangCap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVBanCoHuu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVCoHuu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GVThinhThoang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_GiangVien.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Insert_SoYeu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThietKeCSDL.docx" beforeDir="false" afterPath="$PROJECT_DIR$/ThietKeCSDL.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Choose.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Choose.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVBanCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVBanCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVThinhThoang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GVThinhThoang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GiangVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_GiangVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_SoYeu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Input_SoYeu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienBanCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienBanCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienThinhThoang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Controller/Output_GiangVienThinhThoang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienBanCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienBanCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienCoHuu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienCoHuu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienThinhThoang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/GiangVienThinhThoang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/SoYeu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Model/SoYeu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Views/QuanLyGiangVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWeb_Day1/Views/QuanLyGiangVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Choose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Choose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Input_GVBanCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Input_GVBanCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Input_GVCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Input_GVCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Input_GVThinhThoang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Input_GVThinhThoang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Input_GiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Input_GiangVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Input_SoYeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Input_SoYeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Output_GiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Output_GiangVienBanCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienBanCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Output_GiangVienCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienCoHuu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Output_GiangVienThinhThoang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Output_GiangVienThinhThoang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Process_TinhLuong.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/GiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/GiangVienBanCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienBanCoHuu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/GiangVienCoHuu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienCoHuu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/GiangVienThinhThoang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GiangVienThinhThoang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/SoYeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SoYeu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/QuanLyGiangVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/QuanLyGiangVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiết kế csdl.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$iết kế csdl.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$ểm tra java lần 1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/~$ietKeCSDL.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -186,7 +189,9 @@
       <workItem from="1567848519633" duration="5454000" />
       <workItem from="1567920855768" duration="7641000" />
       <workItem from="1567945529689" duration="179000" />
-      <workItem from="1567945723131" duration="1371000" />
+      <workItem from="1567945723131" duration="16422000" />
+      <workItem from="1567990499991" duration="2855000" />
+      <workItem from="1567999899315" duration="3020000" />
     </task>
     <servers />
   </component>

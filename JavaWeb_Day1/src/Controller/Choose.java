@@ -1,5 +1,6 @@
 package Controller;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Choose {
@@ -19,7 +20,7 @@ public class Choose {
         System.out.println("3. Tien Si");
         System.out.println("4. Pho Giao Su");
         System.out.println("5. Giao Su");
-        System.out.print("Chon hoc vi cua ban : ");
+        System.out.print("Chon hoc vi cua giang vien : ");
         int n = input.nextInt();
         while (n<1 || n>5) {
             System.out.print("Lua chon vua nhap khong ton tai, moi nhap lai: ");
@@ -53,5 +54,10 @@ public class Choose {
             case 2: gioiTinh = nu; break;
         }
         return gioiTinh;
+    }
+
+    public static int getYear() {
+        Date date = new Date();
+        return date.getYear()+1900;
     }
 }
