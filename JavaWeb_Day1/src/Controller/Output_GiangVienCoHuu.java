@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Output_GiangVienCoHuu extends Input_GiangVien {
+    //cau 6
     public static double tienVuotChuanNam(int i) {
         double tienVuotChuan = 0;
         if (((GiangVienCoHuu) listGiangVien.get(i)).getSoGioGiangThucTe()<((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghiaVu()) {
@@ -26,7 +27,7 @@ public class Output_GiangVienCoHuu extends Input_GiangVien {
         return tienVuotChuan;
     }
 
-    public static void output(int i) {
+    public static void outputAllInfor(int i) {
         Output_GiangVien.xuatGiangVien(i);
         System.out.println("\t===> Thu nhap theo thang cua giang vien <===");
         System.out.println("\tSo gio nghia vu   : " + ((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghiaVu());
@@ -38,26 +39,29 @@ public class Output_GiangVienCoHuu extends Input_GiangVien {
     }
 
     public static void xuatGiangVienCoHuu() {
-        for (int i=0; i<listGiangVien.size(); i++) { if (listGiangVien.get(i) instanceof GiangVienCoHuu) output(i); }
+        for (int i=0; i<listGiangVien.size(); i++) { if (listGiangVien.get(i) instanceof GiangVienCoHuu) outputAllInfor(i); }
     }
 
+    //cau 9 chua co bang thc si thi chi co the la bang cu nhan.
     public static void xuatGiangVienCoHuuCuNhan() {
         for (int i=0; i<listGiangVien.size(); i++) {
-            if (listGiangVien.get(i) instanceof GiangVienCoHuu) { if (listGiangVien.get(i).getHocVi().compareTo("Cu Nhan")==0) output(i); }
+            if (listGiangVien.get(i) instanceof GiangVienCoHuu) { if (listGiangVien.get(i).getHocVi().compareTo("Cu Nhan")==0) outputAllInfor(i); }
         }
     }
 
+    //cau 11
     public static void xuatGiangVienCoHuuTheoTen() {
         for (int i=0; i<listGiangVien.size(); i++) {
             if (listGiangVien.get(i) instanceof GiangVienCoHuu) {
                 if (listGiangVien.get(i).getHocVi().compareTo("Cu Nhan")!=0 &&
                     (listGiangVien.get(i).getTen().indexOf("N")==0 ||
                             listGiangVien.get(i).getTen().indexOf("n")==0))
-                    output(i);
+                    outputAllInfor(i);
             }
         }
     }
 
+    //cau 12
     public static void sapXepTheoLuong() {
         Collections.sort(listGiangVien, new Comparator<GiangVien>() {
             @Override
@@ -68,19 +72,61 @@ public class Output_GiangVienCoHuu extends Input_GiangVien {
         });
     }
 
+    public static void outputHighlightInfor(int i) {
+        System.out.printf("%20s%20s%20d%20s%20.1f%n",
+                listGiangVien.get(i).getMaSo(),
+                listGiangVien.get(i).getSoYeu().getHoTen(),
+                listGiangVien.get(i).getNgayNhanVaoTruong().getYear(),
+                listGiangVien.get(i).getHocVi(),
+                ((GiangVienCoHuu) listGiangVien.get(i)).getLuong());
+    }
+
+    //cau 14
     public static void xuatDanhSachGV10Nam() {
         System.out.printf("%20s%20s%20s%20s%20s%n", "Ma Giang Vien", "Ho va Ten", "Nam vao truong", "Hoc Vi", "Luong/Thang");
         for (int i=0; i<listGiangVien.size(); i++) {
+            if (listGiangVien.get(i) instanceof GiangVienCoHuu) { if (Choose.getYear()-listGiangVien.get(i).getNgayNhanVaoTruong().getYear()>10) outputHighlightInfor(i); }
+        }
+    }
+
+    //cau 15
+    public static boolean kiemTraGVDatChuanSoGioNghienCuuKhoaHoc() {
+        for (int i=0; i<listGiangVien.size(); i++) {
             if (listGiangVien.get(i) instanceof GiangVienCoHuu) {
-                if (Choose.getYear()-listGiangVien.get(i).getNgayNhanVaoTruong().getYear()>=10) {
-                    System.out.printf("%20s%20s%20d%20s%20.1f%n",
-                            listGiangVien.get(i).getMaSo(),
-                            listGiangVien.get(i).getSoYeu().getHoTen(),
-                            listGiangVien.get(i).getNgayNhanVaoTruong().getYear(),
-                            listGiangVien.get(i).getHocVi(),
-                            ((GiangVienCoHuu) listGiangVien.get(i)).getLuong());
-                }
+                if (((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghienCuuKhoaHoc() >= 0.3*((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghiaVu()) return true;
             }
         }
+        return false;
+    }
+
+    public static boolean kiemTraHocVi(String hocVi, int soGioNghiaVu, int soGioNghienCuu) {
+        switch (hocVi) {
+            case "Cu Nhan":
+            case "Thac Si":
+                if (soGioNghiaVu>=460 && soGioNghienCuu>=0.3*460) return true;
+            case "Tien Si":
+            case "Pho Giao Su":
+            case "Giao Su":
+                if (soGioNghiaVu>=560 && soGioNghienCuu>=0.3*560) return true;
+        }
+        return false;
+    }
+
+    //cau 16
+    public static boolean kiemTraGVHoanThanhNhiemVu() {
+        for (int i=0; i<listGiangVien.size(); i++) {
+            if (listGiangVien.get(i) instanceof GiangVienCoHuu) {
+                if (kiemTraHocVi(listGiangVien.get(i).getHocVi(),
+                        ((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghiaVu(),
+                        ((GiangVienCoHuu) listGiangVien.get(i)).getSoGioNghienCuuKhoaHoc())) return true;
+            }
+        }
+        return false;
+    }
+
+    //cau 17
+    public static void xuatGVKhongHoanThanhNhiemVuNam() {
+        System.out.printf("%20s%20s%20s%20s%20s%n", "Ma Giang Vien", "Ho va Ten", "Nam vao truong", "Hoc Vi", "Luong/Thang");
+        for (int i=0; i<listGiangVien.size(); i++) { if (!kiemTraGVDatChuanSoGioNghienCuuKhoaHoc() && !kiemTraGVHoanThanhNhiemVu()) outputHighlightInfor(i); }
     }
 }

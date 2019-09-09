@@ -53,6 +53,7 @@ public class GiangVienCoHuu extends GiangVien implements TinhLuong {
         this.soGioGiangThucTe = soGioGiangThucTe;
     }
 
+    //cau 4
     @Override
     public double getLuong() {
         double tongLuong = getLuongCoBan();

@@ -15,6 +15,7 @@ public class Output_GiangVienBanCoHuu extends Input_GiangVien {
         for (int i=0; i<listGiangVien.size(); i++) { if (listGiangVien.get(i) instanceof GiangVienBanCoHuu) output(i); }
     }
 
+    //cau 8
     public static void xuatGiangVienBanCoHuuCongTac3Nam() {
         for (int i=0; i<listGiangVien.size(); i++) {
             if (listGiangVien.get(i) instanceof GiangVienBanCoHuu) {

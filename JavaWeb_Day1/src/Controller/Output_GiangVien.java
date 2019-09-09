@@ -6,6 +6,38 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Output_GiangVien extends Input_GiangVien {
+    //cau 3
+    public static void thongTinGVNghiViec() {
+        for (int i=0; i<listGiangVien.size(); i++) {
+            if (listGiangVien.get(i) instanceof GiangVienCoHuu) {
+                if (((GiangVienCoHuu) listGiangVien.get(i)).getLuong()==0) {
+                    System.out.printf("%20s%20s%20s%20s%n",
+                            listGiangVien.get(i).getMaSo(),
+                            listGiangVien.get(i).getSoYeu().getHoTen(),
+                            "GV Co Huu", "Da nghi viec");
+                } else {
+                    if (listGiangVien.get(i) instanceof GiangVienBanCoHuu) {
+                        if (((GiangVienCoHuu) listGiangVien.get(i)).getLuong()==0) {
+                            System.out.printf("%20s%20s%20s%20s%n",
+                                    listGiangVien.get(i).getMaSo(),
+                                    listGiangVien.get(i).getSoYeu().getHoTen(),
+                                    "GV Ban Co Huu", "Da nghi viec");
+                        }
+                    } else {
+                        if (listGiangVien.get(i) instanceof GiangVienThinhThoang) {
+                            if (((GiangVienThinhThoang) listGiangVien.get(i)).getLuong()==0) {
+                                System.out.printf("%20s%20s%20s%20s%n",
+                                        listGiangVien.get(i).getMaSo(),
+                                        listGiangVien.get(i).getSoYeu().getHoTen(),
+                                        "GV Thinh Thoang", "Da nghi viec");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public static void xuatGiangVien(int i) {
         System.out.println("\n\t- Giang vien thu " + (i+1));
         System.out.println("\tMa so           : " + listGiangVien.get(i).getMaSo());
@@ -46,6 +78,7 @@ public class Output_GiangVien extends Input_GiangVien {
         }
     }
 
+    //cau 10
     public static void xuatDanhSachGiangVienThacSiTroLen() {
         System.out.printf("%20s%20s%20s%20s%20s%20s%n", "Ma Giang Vien", "Ho Va Ten", "Hoc Vi", "Email", "So Dien Thoai", "Luong/Thang");
         for (int i=0; i<listGiangVien.size(); i++) {
@@ -75,6 +108,7 @@ public class Output_GiangVien extends Input_GiangVien {
         return thuTu;
     }
 
+    //cau 13
     public static void sapXepTheoHocVi() {
         Collections.sort(listGiangVien, new Comparator<GiangVien>() {
             @Override

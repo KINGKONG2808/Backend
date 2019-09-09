@@ -33,6 +33,7 @@ public class GiangVienBanCoHuu extends GiangVien implements TinhLuong {
         this.luongCoBan = luongCoBan;
     }
 
+    //cau 4
     @Override
     public double getLuong() {
         double tongLuong = getLuongCoBan();

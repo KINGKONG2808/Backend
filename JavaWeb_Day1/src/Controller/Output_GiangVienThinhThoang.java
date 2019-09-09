@@ -14,12 +14,12 @@ public class Output_GiangVienThinhThoang extends Input_GiangVien {
         for (int i=0; i<listGiangVien.size(); i++) { if (listGiangVien.get(i) instanceof GiangVienThinhThoang) output(i); }
     }
 
+    //cau 7
     public static void xuatGiangVienThingGiangCongTac1Nam() {
         for (int i=0; i<listGiangVien.size(); i++) {
             if (listGiangVien.get(i) instanceof GiangVienThinhThoang) {
-                if ((listGiangVien.get(i).getHocVi().compareTo("Tien Si")==0 ||
-                        listGiangVien.get(i).getHocVi().compareTo("Pho Giao Su")==0 ||
-                        listGiangVien.get(i).getHocVi().compareTo("Giao Su")==0) &&
+                if ((listGiangVien.get(i).getHocVi().compareTo("Cu Nhan")!=0 ||
+                        listGiangVien.get(i).getHocVi().compareTo("Thac Si")!=0) &&
                         (Choose.getYear()-listGiangVien.get(i).getNgayNhanVaoTruong().getYear()>=1)) {
                     output(i);
                 }

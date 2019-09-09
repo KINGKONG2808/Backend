@@ -33,6 +33,7 @@ public class GiangVienThinhThoang extends GiangVien implements TinhLuong {
         this.soTietThucDay = soTietThucDay;
     }
 
+    //cau 5
     @Override
     public double getLuong() { return 100000*getSoTietThucDay(); }
 }

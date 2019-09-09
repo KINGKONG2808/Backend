@@ -3,6 +3,7 @@ package Controller;
 import Model.*;
 
 public class Add_GiangVien extends Input_GiangVien {
+    //cau 2
     public static boolean themGiangVienCoHuu() {
         GiangVienCoHuu giangVienCoHuu = new GiangVienCoHuu();
         Input_GVCoHuu.nhapGiaoVienCoHuu(giangVienCoHuu);
