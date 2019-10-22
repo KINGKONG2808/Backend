@@ -1,36 +1,85 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dev</groupId>
-  <artifactId>javaweb-001</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>javaweb-001 Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <!-- dinh nghia phien ban dependency -->
-  <properties>
-  	<java.version>1.8</java.version>
-  	<junit.version>3.8.1</junit.version>
-  	<commons-math3.version>3.2</commons-math3.version>
-  </properties>
-  
-  	<!-- Danh sách các thư viện được dùng trong dự án -->
-  <dependencies>
-  		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dev</groupId>
+	<artifactId>javaweb-001</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>javaweb-001 Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<description>Demo javaweb</description>
+
+	<!-- giống như java class A extends B => B là cha của A -->
+	<!-- project java-web-001 extends spring-boot-starter-parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+	</parent>
+
+	<!-- dinh nghia phien ban dependency -->
+	<properties>
+		<java.version>1.8</java.version>
+		<!-- chi dinh phien ban java cho maven -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<commons-math3.version>3.6.2</commons-math3.version>
+	</properties>
+
+	<!-- Danh sách các thư viện được dùng trong dự án -->
+	<dependencies>
+		<!-- tích hợp spring-mvc vào project -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-math3</artifactId>
 			<version>3.2</version>
 		</dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-  	<plugins>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- dùng để xử lí các thẻ jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<!-- trình thông dịch jsp -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		<!-- tự động restart khi thay đổi code -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- đóng gói dự án cùng các thư viện ngoài -->
+			<!-- sử dụng lệnh: mvn clean compile assembly:single -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.devpro.test.JavaTest</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -43,6 +92,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-    <finalName>javaweb-001</finalName>
-  </build>
+		<finalName>javaweb-001</finalName>
+	</build>
 </project>
