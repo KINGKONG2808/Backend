@@ -9,15 +9,16 @@ import com.dev.beans.Employee;
 
 @SpringBootApplication /** diem vao cua spring boot */
 public class StartServer implements CommandLineRunner {
-	@Autowired Employee employee;
-	
+	@Autowired
+	Employee employee;
+
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("---------------- E M P L O Y E E ----------------");
-		System.out.println("Name: " + employee.name);
-		System.out.println("Address: " + employee.address.address1 + " " + employee.address.address2);
+//		System.out.println("---------------- E M P L O Y E E ----------------");
+//		System.out.println("Name: " + employee.name);
+//		System.out.println("Address: " + employee.address.address1 + " " + employee.address.address2);
 	}
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(StartServer.class, args);
 	}

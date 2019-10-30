@@ -10,13 +10,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-/** day la file cau hinh mvc cho project*/
+/** day la file cau hinh mvc cho project */
 
-@Configuration /** bao hieu cho spring boot biet day la file cau hinh*/
-@EnableWebMvc /** file cau hinh nay dung cho web mvc*/
-@ComponentScan(basePackages = {"com.dev"}) /** chi cho spring mvc biet noi chua cac controller*/
+@Configuration /** bao hieu cho spring boot biet day la file cau hinh */
+@EnableWebMvc /** file cau hinh nay dung cho web mvc */
+@ComponentScan(basePackages = { "com.dev" }) /** chi cho spring mvc biet noi chua cac controller */
 public class WebMVC implements WebMvcConfigurer {
-	/** chi cho spring mvc biet noi chua cac views da tao ow phan front-end*/
+	/** chi cho spring mvc biet noi chua cac views da tao ow phan front-end */
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver bean = new InternalResourceViewResolver();
@@ -25,7 +25,7 @@ public class WebMVC implements WebMvcConfigurer {
 		bean.setSuffix(".jsp");
 		return bean;
 	}
-	
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/css/**").addResourceLocations("classpath:/META-INF/css/");

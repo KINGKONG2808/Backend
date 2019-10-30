@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class TestController {
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public void test(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+	public void test(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
+			throws IOException {
 		response.getOutputStream().print("Halo, bitch :))");
 	}
 }
