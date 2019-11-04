@@ -15,7 +15,7 @@
 <meta name="keyword" content="Website technology store" />
 <meta name="author" content="H&H" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Macbook</title>
+<title>Macbook Pro 2019</title>
 
 <!-- I N C L U D E R -->
 <%@ include file="/WEB-INF/views/layout/includer.jsp"%>
@@ -30,41 +30,29 @@
 		<div class="row">
 			<!-- P R O D U C T S -->
 			<div class="col-md-12">
-				<h1 class="font-weight-bold my-4 text-danger">Macbook Pro</h1>
+				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
+					Pro 2019</h1>
 				<div class="row">
 					<!-- dung jstl cho nay -->
-					<c:forEach var="macPro" items="${_macPro}">
-						<div class="col-md-3 my-4 mb-4">
-							<div class="card mb-4">
-								<img src="${macPro.imageProduct}" alt="${macPro.nameProduct}"
-									class="card-img-top my-4 mb-4"> <a href="#"
-									class="card-body text-center">${macPro.nameProduct}</a>
-							</div>
-						</div>
-					</c:forEach>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<!-- P R O D U C T S -->
-			<div class="col-md-12">
-				<h1 class="font-weight-bold my-4 text-danger">Macbook Air</h1>
-				<div class="row">
-					<!-- dung jstl cho nay -->
-					<c:forEach var="macAir" items="${_macAir}">
-						<div class="col-md-3 my-4 mb-4">
-							<div class="card mb-4">
-								<img src="${macAir.imageProduct}" alt="${macAir.nameProduct}"
-									class="card-img-top my-4 mb-4"> <a href="#"
-									class="card-body text-center">${macAir.nameProduct}</a>
-							</div>
-						</div>
+					<c:forEach var="macPro" items="${_macbookPro}">
+						<c:choose>
+							<c:when test="${macPro.year==2019}">
+								<div class="col-md-6 my-4 mb-4">
+									<div class="card mb-4">
+										<img src="${macPro.image}" alt=""
+											class="card-img-top my-2 mb-4"> <a href="#"
+											class="card-body text-center">${macPro.name}</a> <a
+											class="card-footer text-center"><b>$ </b>${macPro.price}</a>
+									</div>
+								</div>
+							</c:when>
+						</c:choose>
 					</c:forEach>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
 	<!-- M O D A L: R E G I S T E R -->
 	<%@ include file="/WEB-INF/views/layout/dialogs.jsp"%>
 

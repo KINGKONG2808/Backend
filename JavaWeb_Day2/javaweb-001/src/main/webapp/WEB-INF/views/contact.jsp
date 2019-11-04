@@ -119,6 +119,9 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- M O D A L: R E G I S T E R -->
+	<%@ include file="/WEB-INF/views/layout/dialogs.jsp"%>
 
 	<!-- F O O T E R -->
 	<%@ include file="/WEB-INF/views/layout/footer.jsp"%>

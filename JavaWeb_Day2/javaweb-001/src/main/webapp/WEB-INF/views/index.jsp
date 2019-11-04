@@ -31,33 +31,60 @@
 			<div class="col-md-12">
 
 				<!-- macbook pro new -->
-				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook Pro</h1>
+				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
+					Pro</h1>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="row">
 							<!-- dung jstl cho nay -->
 							<c:forEach var="macPro" items="${_macPro}">
-								<div class="col-md-4 my-5 mb-3">
-									<div class="card mb-3">
-										<img src="${macPro.imageProduct}" alt="${macPro.nameProduct}"
-											class="card-img-top my-4 mb-4"> <a href="#"
-											class="card-body text-center">${macPro.nameProduct}</a>
-									</div>
-								</div>
+								<c:choose>
+									<c:when test="${macPro.year==2019}">
+										<div class="col-md-3 my-5 mb-3">
+											<div class="card mb-3">
+												<img src="${macPro.imageProduct}"
+													alt="${macPro.nameProduct}" class="card-img-top my-4 mb-4">
+												<a href="/macpro2019" class="card-body text-center">${macPro.nameProduct}</a>
+											</div>
+										</div>
+									</c:when>
+									<c:when test="${macPro.year==2018}">
+										<div class="col-md-3 my-5 mb-3">
+											<div class="card mb-3">
+												<img src="${macPro.imageProduct}"
+													alt="${macPro.nameProduct}" class="card-img-top my-4 mb-4">
+												<a href="/macpro2018" class="card-body text-center">${macPro.nameProduct}</a>
+											</div>
+										</div>
+									</c:when>
+									<c:otherwise>
+										<div class="col-md-3 my-5 mb-3">
+											<div class="card mb-3">
+												<img src="${macPro.imageProduct}"
+													alt="${macPro.nameProduct}" class="card-img-top my-4 mb-4">
+												<a href="#" class="card-body text-center">${macPro.nameProduct}</a>
+											</div>
+										</div>
+									</c:otherwise>
+								</c:choose>
 							</c:forEach>
+							<div class="col-md-12">
+								<a href="#" class="btn btn-default btn-block mb-4"><i class="glyphicon glyphicon-hand-right"></i> See more about Macbook Pro</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<hr>
 				<!-- macbook air new -->
-				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook Air</h1>
+				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
+					Air</h1>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="row">
 							<!-- dung jstl cho nay -->
 							<c:forEach var="macAir" items="${_macAir}">
-								<div class="col-md-4 my-5 mb-3">
+								<div class="col-md-3 my-5 mb-3">
 									<div class="card mb-3">
 										<img src="${macAir.imageProduct}" alt="${macAir.nameProduct}"
 											class="card-img-top my-4 mb-4"> <a href="#"
@@ -86,7 +113,7 @@
 						</div>
 					</c:forEach>
 				</div>
-				
+
 				<!-- btn see more -->
 				<!-- <div class="row">
 					<div class="col-md-12">

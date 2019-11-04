@@ -36,8 +36,8 @@
 					class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					data-toggle="dropdown"> Macbookpro </a>
 					<div class="dropdown-menu bg-danger">
-						<a class="dropdown-item" href="#">Macbookpro 2019</a> <a
-							class="dropdown-item" href="#">Macbookpro 2018</a> <a
+						<a class="dropdown-item" href="/macpro2019">Macbookpro 2019</a> <a
+							class="dropdown-item" href="/macpro2018">Macbookpro 2018</a> <a
 							class="dropdown-item" href="#">Macbookpro 2017</a> <a
 							class="dropdown-item" href="#">Macbookpro 2016</a> <a
 							class="dropdown-item" href="#">Macbookpro 2015</a> <a

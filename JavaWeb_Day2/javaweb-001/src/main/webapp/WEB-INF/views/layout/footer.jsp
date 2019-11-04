@@ -4,6 +4,8 @@
 <!-- tich hop jstl vao jsp -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!-- I N C L U D E R -->
+<%@ include file="/WEB-INF/views/layout/includer.jsp"%>
 
 <div id="footer" class="container-fluid bg-dark text-white">
 	<div class="container text-center text-md-left">
@@ -31,12 +33,12 @@
 			<div class="col-md-2 mx-auto">
 				<h5 class="font-weight-bold mt-3 mb-3">Register / Login</h5>
 				<div class="row">
-					<a class="btn btn-primary btn-block my-4">
+				<a href="#" class="btn btn-primary btn-block my-4" data-toggle="modal" data-target="#modalSigninForm">
 					<i class="glyphicon glyphicon-open"></i>&nbsp;&nbsp;Sign in
 				</a>
 				</div>
 				<div class="row">
-					<a class="btn btn-primary btn-block my-2">
+				<a href="#" class="btn btn-primary btn-block my-2" data-toggle="modal" data-target="#modalRegisterForm">
 					<i class="glyphicon glyphicon-floppy-save"></i>&nbsp;&nbsp;Sign up
 				</a>
 				</div>
