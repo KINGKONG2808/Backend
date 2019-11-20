@@ -113,20 +113,7 @@
 						</div>
 					</c:forEach>
 				</div>
-
-				<!-- btn see more -->
-				<!-- <div class="row">
-					<div class="col-md-12">
-						<a href="/details" class="btn btn-primary mb-4"><i class="glyphicon glyphicon-hand-right"></i> See More →</a>
-					</div>
-				</div> -->
-
 			</div>
-
-			<%-- <!-- W I D G E T -->
-			<div class="col-md-3 my-4 mb-4">
-				<%@ include file="/WEB-INF/views/layout/widget.jsp"%>
-			</div> --%>
 		</div>
 	</div>
 

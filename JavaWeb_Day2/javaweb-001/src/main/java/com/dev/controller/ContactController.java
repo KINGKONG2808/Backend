@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.hibernate.validator.internal.util.privilegedactions.NewInstance;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dev.entities.Contact;
+import com.dev.repositories.ContactRepository;
 
 @Controller
 public class ContactController {
+	@Autowired ContactRepository contactrepository;
+	
 	@RequestMapping(value = { "/contact" }, method = { RequestMethod.GET })
 	public String contact(final ModelMap model, final HttpServletRequest request, final HttpServletResponse respone)
 			throws IOException {
@@ -39,6 +42,9 @@ public class ContactController {
 //		System.out.println(contact.getEmail());
 //		System.out.println(contact.getPhone());
 //		System.out.println(contact.getContent());
+		
+		//lệnh này để lưu thông tin từfront về dtb 
+		contactrepository.save(contact);
 
 		// luu du lieu vao dtb, tra ve thong bao
 		model.addAttribute("status", "success");

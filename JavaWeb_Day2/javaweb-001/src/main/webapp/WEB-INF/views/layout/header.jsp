@@ -76,11 +76,10 @@
 							class="dropdown-item" href="#">Other</a>
 					</div></li>
 				<li class="nav-item"><a class="nav-link"
-					href="https://www.facebook.com/KINGKONG2808">Service</a></li>
-				<li class="nav-item"><a class="nav-link"
 					href="${pageContext.request.contextPath}/contact">Contact</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="https://github.com/KINGKONG2808">Subcrible</a></li>
+				<!-- <li class="nav-item"><button class="nav-link btn-success" style="border-radius: 5px">Go to Admin</button></li> -->
 			</ul>
 			<form class="form-inline navbar-right" action="#">
 				<div class="form-group">

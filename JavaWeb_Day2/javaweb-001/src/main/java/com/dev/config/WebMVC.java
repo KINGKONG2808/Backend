@@ -32,5 +32,7 @@ public class WebMVC implements WebMvcConfigurer {
 		registry.addResourceHandler("/js/**").addResourceLocations("classpath:/META-INF/js/");
 		registry.addResourceHandler("/img/**").addResourceLocations("classpath:/META-INF/img/");
 		registry.addResourceHandler("/glyphicons/**").addResourceLocations("classpath:/META-INF/glyphicons/");
+		registry.addResourceHandler("/summernote/**").addResourceLocations("classpath:/META-INF/summernote/");
+		registry.addResourceHandler("/files/**").addResourceLocations("/Users/kingkong/Desktop/BackEnd/JavaWeb_Day2/javaweb-001/imgUpload/");
 	}
 }

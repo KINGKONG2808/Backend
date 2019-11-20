@@ -83,7 +83,7 @@
 					</div>
 				</div>
 
-				<div class="card-body">
+<%-- 				<div class="card-body">
 					<div class="card-header headerSubmit">Submit normal</div>
 					<div class="panel-body">
 						<form action="/contact-normal" method="post">
@@ -115,7 +115,8 @@
 							<button type="submit" class="btn btn-primary my-3">Submit</button>
 						</form>
 					</div>
-				</div>
+				</div> --%>
+				
 			</div>
 		</div>
 	</div>

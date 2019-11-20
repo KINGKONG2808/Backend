@@ -1,3 +1,14 @@
+//summernote for function add post
+$(document).ready(function() {
+	$('#my-summernote').summernote();
+	$("#myInput").on("keyup", function() {
+	    var value = $(this).val().toLowerCase();
+	    $("#myTable tr").filter(function() {
+	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	  });
+})
+
 // validate email right here
 function validate() {
 	var email = $("#userEmail").val();
