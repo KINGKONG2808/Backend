@@ -17,8 +17,9 @@ import com.dev.repositories.ContactRepository;
 
 @Controller
 public class ContactController {
-	@Autowired ContactRepository contactrepository;
-	
+	@Autowired
+	ContactRepository contactrepository;
+
 	@RequestMapping(value = { "/contact" }, method = { RequestMethod.GET })
 	public String contact(final ModelMap model, final HttpServletRequest request, final HttpServletResponse respone)
 			throws IOException {
@@ -42,8 +43,8 @@ public class ContactController {
 //		System.out.println(contact.getEmail());
 //		System.out.println(contact.getPhone());
 //		System.out.println(contact.getContent());
-		
-		//lệnh này để lưu thông tin từfront về dtb 
+
+		// lệnh này để lưu thông tin từfront về dtb
 		contactrepository.save(contact);
 
 		// luu du lieu vao dtb, tra ve thong bao

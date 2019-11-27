@@ -49,6 +49,6 @@
 		<c:set var="now" value="<%=new java.util.Date()%>" />
 		©
 		<fmt:formatDate pattern="yyyy" value="${now}" />
-		Developed by: H&H
+		Developed by: <a href="/admin/list-contact" target="_blank" class="text-white">H&H</a>
 	</div>
 </div>

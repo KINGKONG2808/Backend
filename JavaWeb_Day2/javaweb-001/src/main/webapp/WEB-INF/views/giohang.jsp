@@ -15,7 +15,7 @@
 <meta name="keyword" content="Website technology store" />
 <meta name="author" content="H&H" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Macbook Pro 2019</title>
+<title>Bill</title>
 
 <!-- I N C L U D E R -->
 <%@ include file="/WEB-INF/views/layout/includer.jsp"%>
@@ -28,31 +28,34 @@
 	<!-- B O D Y -->
 	<div id="main" class="container">
 		<div class="row">
-			<!-- P R O D U C T S -->
 			<div class="col-md-12">
-				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
-					Pro 2019</h1>
-				<div class="row">
-					<!-- dung jstl cho nay -->
-					<c:forEach var="macPro" items="${_macbookPro}">
-						<c:choose>
-							<c:when test="${macPro.year==2019}">
-								<div class="col-md-6 my-4 mb-4">
-									<div class="card mb-4">
-										<img src="${macPro.image}" alt=""
-											class="card-img-top my-2 mb-4"> <a href="#"
-											class="card-body text-center">${macPro.name}</a> <a
-											class="card-footer text-center"><b>$ </b>${macPro.price}</a>
-									</div>
-								</div>
-							</c:when>
-						</c:choose>
-					</c:forEach>
-				</div>
+				<h1 class="mt-2"></h1>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead class="thead-dark">
+						<tr>
+							<th>ProductId</th>
+							<th>ProductName</th>
+							<th>Price</th>
+							<th>Quality</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<c:forEach var="items" items="${giohang }">
+							<tr>
+								<td>${items.productId }</td>
+								<td>${items.productName }</td>
+								<td>${items.price }</td>
+								<td>${items.quality }</td>
+							</tr>
+						</c:forEach>
+
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- M O D A L: R E G I S T E R -->
 	<%@ include file="/WEB-INF/views/layout/dialogs.jsp"%>
 

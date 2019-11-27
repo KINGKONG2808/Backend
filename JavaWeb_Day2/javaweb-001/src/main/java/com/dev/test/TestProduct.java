@@ -6,8 +6,6 @@ public class TestProduct {
 	private String imageProduct;
 	private String nameProduct;
 	private int year;
-	
-	
 
 	public TestProduct(String imageProduct, String nameProduct, int year) {
 		super();
@@ -31,7 +29,7 @@ public class TestProduct {
 	public void setNameProduct(String nameProduct) {
 		this.nameProduct = nameProduct;
 	}
-	
+
 	public int getYear() {
 		return year;
 	}

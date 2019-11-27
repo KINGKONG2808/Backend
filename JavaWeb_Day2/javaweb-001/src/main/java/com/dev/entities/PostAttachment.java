@@ -12,13 +12,13 @@ import javax.persistence.FetchType;
 public class PostAttachment extends BaseEntity {
 	@Column(name = "name", length = 200, nullable = false)
 	private String name;
-	
+
 	@Column(name = "path", length = 200, nullable = false)
 	private String path;
-	
+
 	@Column(name = "mime", length = 200, nullable = false)
 	private String mime;
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "post_id")
 	private Post post;

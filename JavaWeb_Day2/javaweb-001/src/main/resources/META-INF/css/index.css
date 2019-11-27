@@ -19,3 +19,13 @@
 #footer .footerSign {
 	weight: 100%;
 }
+
+label.required:after {
+	color: red;
+	content: " *";
+}
+
+.carousel-inner img {
+      width: 100%;
+      height: 700px;
+  }

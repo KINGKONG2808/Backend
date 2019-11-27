@@ -8,6 +8,7 @@ import javax.persistence.Table;
 
 /**
  * Lưu trữ dữ liệu người dùng đẩy lên từ tầng View.
+ * 
  * @author admin
  */
 @Entity
@@ -17,16 +18,16 @@ public class Contact extends BaseEntity {
 //	private String email;
 //	private String phone;
 //	private String content;
-	
+
 	@Column(name = "full_name", length = 100, nullable = false)
 	private String fullName;
-	
+
 	@Column(name = "email", length = 100, nullable = false)
 	private String email;
 
 	@Column(name = "phone", length = 100, nullable = true)
 	private String phone;
-	
+
 	@Column(name = "content", length = 1000, nullable = false)
 	private String content;
 

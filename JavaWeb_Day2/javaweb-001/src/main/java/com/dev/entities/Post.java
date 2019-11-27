@@ -1,15 +1,21 @@
 package com.dev.entities;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.springframework.data.annotation.CreatedDate;
 
 @Entity
 @Table(name = "tbl_post")
@@ -29,13 +35,26 @@ public class Post extends BaseEntity {
 
 	@Column(name = "create_date", nullable = false)
 	private Date createdDate;
-	
+
 	@Column(name = "price", precision = 13, scale = 2, nullable = false)
 	private BigDecimal price;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "post_category_id")
 	private Categories category;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "post", fetch = FetchType.LAZY)
+	private List<PostAttachment> postAttachments = new ArrayList<PostAttachment>();
+
+	public void addPostAttachment(PostAttachment postAttachment) {
+		postAttachments.add(postAttachment);
+		postAttachment.setPost(this);
+	}
+
+	public void removePostAttachment(PostAttachment postAttachment) {
+		postAttachments.remove(postAttachment);
+		postAttachment.setPost(null);
+	}
 
 	public String getTitle() {
 		return title;
@@ -85,4 +104,19 @@ public class Post extends BaseEntity {
 		this.category = category;
 	}
 
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public List<PostAttachment> getPostAttachments() {
+		return postAttachments;
+	}
+
+	public void setPostAttachments(List<PostAttachment> postAttachments) {
+		this.postAttachments = postAttachments;
+	}
 }

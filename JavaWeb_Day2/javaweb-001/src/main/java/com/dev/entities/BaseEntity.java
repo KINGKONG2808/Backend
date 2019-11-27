@@ -21,6 +21,5 @@ public class BaseEntity {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-}
 
+}

@@ -12,7 +12,7 @@ public class RestResponse {
 	// hàm này ngăn tạo mới ob từ toán tử new
 	private RestResponse() {
 	};
-	
+
 	// thông báo thành công
 	public static RestResponse success(String message) {
 		RestResponse restResponse = new RestResponse();

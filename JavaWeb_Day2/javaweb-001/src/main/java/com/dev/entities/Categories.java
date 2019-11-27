@@ -26,12 +26,12 @@ public class Categories extends BaseEntity {
 		posts.add(post);
 		post.setCategory(this);
 	}
-	
+
 	public void removePost(Post post) {
 		posts.remove(post);
 		post.setCategory(null);
 	}
-	
+
 	public String getName() {
 		return name;
 	}

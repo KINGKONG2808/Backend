@@ -20,7 +20,7 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto justify-content-center">
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					data-toggle="dropdown"> iMac </a>
@@ -79,15 +79,14 @@
 					href="${pageContext.request.contextPath}/contact">Contact</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="https://github.com/KINGKONG2808">Subcrible</a></li>
-				<!-- <li class="nav-item"><button class="nav-link btn-success" style="border-radius: 5px">Go to Admin</button></li> -->
 			</ul>
-			<form class="form-inline navbar-right" action="#">
+			<form class="navbar-nav form-inline navbar-right" action="#">
 				<div class="form-group">
-					<a class="btn btn-primary mr-3" href="#"><i
+					<a class="btn btn-primary mr-3" href="${pageContext.request.contextPath}/cart/finish"><i
 						class="glyphicon glyphicon-shopping-cart"></i></a>
 				</div>
 			</form>
-			<form class="form-inline navbar-form navbar-right" action="#">
+			<form class="navbar-nav form-inline navbar-form navbar-right" action="#">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
 				</div>

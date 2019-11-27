@@ -2,11 +2,11 @@
 $(document).ready(function() {
 	$('#my-summernote').summernote();
 	$("#myInput").on("keyup", function() {
-	    var value = $(this).val().toLowerCase();
-	    $("#myTable tr").filter(function() {
-	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-	    });
-	  });
+		var value = $(this).val().toLowerCase();
+		$("#myTable tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
 })
 
 // validate email right here
@@ -40,6 +40,55 @@ $("#divSuccessPassword").hide();
 $("#divErrorPassword").hide();
 
 var Blog = {
+	addToCart : function(productId) {
+		var data = {};
+		data["productId"] = productId;
+		$.ajax({
+			url : "/rest/api/cart/addToCart",
+			type : "post",
+			contentType : "application/json", // dữ liệu gửi lên RestAPI có
+			// dạng là json.
+			data : JSON.stringify(data), // object json -> string json
+
+			dataType : "json", // dữ liệu từ Rest trả về là json.
+			success : function(jsonResult) { // được gọi khi web-service trả
+				// về dữ liệu.
+				if (jsonResult.status == "success") {
+					alert('Added product ' + productId + ' to cart.')
+				}
+			}
+		});
+	},
+
+	deleteForm : function(modalID, entityId, restApi) {
+		$("#deleteOk").click(function() {
+
+			var data = {};
+			data["entityId"] = entityId;
+			$.ajax({
+				url : restApi,
+				type : "post",
+				contentType : "application/json", // dữ liệu gửi lên RestAPI
+													// có dạng là json.
+				data : JSON.stringify(data), // object json -> string json
+
+				dataType : "json", // dữ liệu từ Rest trả về là json.
+				success : function(jsonResult) { // được gọi khi web-service
+													// trả về dữ liệu.
+					if (jsonResult.status == "success") {
+						// thành công
+						window.location.reload();
+
+					} else {
+						// thất bại
+					}
+				}
+			});
+
+		});
+		$('#' + modalID).modal('show');
+	},
+
 	userRegister : function() {
 		var userName = $("#userUserName").val();
 		var email = $("#userEmail").val();

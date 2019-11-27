@@ -20,10 +20,11 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="#contact">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
-				<li class="nav-item"><a class="nav-link" href="#product">Products</a></li>
+			<ul class="navbar-nav mr-auto justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/admin/list-contact">List Contacts</a></li>
+				<li class="nav-item"><a class="nav-link" href="#product">List Product</a></li>
+				<li class="nav-item"><a class="nav-link" href="/admin/add-post">Add Product</a></li>
 				<li class="nav-item"><a class="nav-link" href="#customer">Customers</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Carts</a></li>
 			</ul>
