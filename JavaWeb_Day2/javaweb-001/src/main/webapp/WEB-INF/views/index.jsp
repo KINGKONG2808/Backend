@@ -89,7 +89,7 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<!-- macbook pro new -->
+				<!-- macbook pro -->
 				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
 					Pro</h1>
 				<div class="row">
@@ -97,7 +97,7 @@
 						<div class="row">
 							<c:forEach var="product" items="${_products}">
 								<c:choose>
-									<c:when test="${product.category.id == 1}">
+									<c:when test="${product.category.id == 1 || product.category.id == 2 || product.category.id == 3 || product.category.id == 4 || product.category.id == 5 || product.category.id == 6 || product.category.id == 7 || product.category.id == 8}">
 										<div class="col-md-3 my-4">
 											<div class="card my-4">
 												<a
@@ -124,8 +124,8 @@
 													</a>
 												</div>
 												<div class="card-footer text-muted" style="font-size: 10px">
-													${product.category.name}, posted on
-													${product.createdDate.getDay()}/${product.createdDate.getMonth()+1}/${product.createdDate.getYear()+1900}
+													${product.category.name}, posted on ${product.getCreatedDate()}
+													<%-- ${product.createdDate.getDay()}/${product.createdDate.getMonth()+1}/${product.createdDate.getYear()+1900} --%>
 												</div>
 											</div>
 										</div>
@@ -135,7 +135,99 @@
 						</div>
 					</div>
 				</div>
-
+				
+				<!-- macbook air -->
+				<h1 class="font-weight-bold my-4 text-danger text-center">Macbook
+					Air</h1>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<c:forEach var="product" items="${_products}">
+								<c:choose>
+									<c:when test="${product.category.id == 9 || product.category.id == 10 || product.category.id == 11 || product.category.id == 12 || product.category.id == 13 || product.category.id == 14 || product.category.id == 15 || product.category.id == 16}">
+										<div class="col-md-3 my-4">
+											<div class="card my-4">
+												<a
+													href="${pageContext.request.contextPath}/details/${product.id}"
+													style="display: block"> <img class="card-img-top"
+													src="${pageContext.request.contextPath}/files/${product.postAttachments.get(0).name }"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a class="card-title text-dark"
+														href="${pageContext.request.contextPath}/details/${product.id}"
+														style="font-size: 13px; display: block; text-decoration: none">
+														<c:out value="${product.title }"></c:out> <br>
+													</a>
+													<hr>
+													<h5 class="text-center">
+														<i>$ </i>
+														<c:out value="${product.price }"></c:out>
+													</h5>
+													<a href="javascript:Blog.addToCart(${product.id});"
+														class="btn btn-danger btn-block" style="font-size: 13px">
+														<i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Add
+														to Cart
+													</a>
+												</div>
+												<div class="card-footer text-muted" style="font-size: 10px">
+													${product.category.name}, posted on ${product.getCreatedDate()}
+													<%-- ${product.createdDate.getDay()}/${product.createdDate.getMonth()+1}/${product.createdDate.getYear()+1900} --%>
+												</div>
+											</div>
+										</div>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+						</div>
+					</div>
+				</div>
+			
+				<!-- imac -->
+				<h1 class="font-weight-bold my-4 text-danger text-center">iMac</h1>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<c:forEach var="product" items="${_products}">
+								<c:choose>
+									<c:when test="${product.category.id == 17 || product.category.id == 18 || product.category.id == 19 || product.category.id == 20 || product.category.id == 21 || product.category.id == 22}">
+										<div class="col-md-3 my-4">
+											<div class="card my-4">
+												<a
+													href="${pageContext.request.contextPath}/details/${product.id}"
+													style="display: block"> <img class="card-img-top"
+													src="${pageContext.request.contextPath}/files/${product.postAttachments.get(0).name }"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a class="card-title text-dark"
+														href="${pageContext.request.contextPath}/details/${product.id}"
+														style="font-size: 13px; display: block; text-decoration: none">
+														<c:out value="${product.title }"></c:out> <br>
+													</a>
+													<hr>
+													<h5 class="text-center">
+														<i>$ </i>
+														<c:out value="${product.price }"></c:out>
+													</h5>
+													<a href="javascript:Blog.addToCart(${product.id});"
+														class="btn btn-danger btn-block" style="font-size: 13px">
+														<i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Add
+														to Cart
+													</a>
+												</div>
+												<div class="card-footer text-muted" style="font-size: 10px">
+													${product.category.name}, posted on ${product.getCreatedDate()}
+													<%-- ${product.createdDate.getDay()}/${product.createdDate.getMonth()+1}/${product.createdDate.getYear()+1900} --%>
+												</div>
+											</div>
+										</div>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

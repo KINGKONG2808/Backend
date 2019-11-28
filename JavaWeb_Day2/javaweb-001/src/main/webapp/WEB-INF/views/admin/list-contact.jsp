@@ -15,7 +15,7 @@
 <meta name="keyword" content="Website technology store" />
 <meta name="author" content="H&H admin" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Manage Page</title>
+<title>List Contact</title>
 
 <!-- I N C L U D E R -->
 <%@ include file="/WEB-INF/views/layout/includer.jsp"%>
@@ -26,9 +26,13 @@
 	<%@ include file="/WEB-INF/views/layout/admin/header-admin.jsp"%>
 
 	<!-- B O D Y -->
-	<div id="main" class="container">
+	<div id="main" class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-2">
+				<%@ include file="/WEB-INF/views/layout/admin/widget.jsp"%>
+			</div>
+
+			<div class="col-md-10">
 				<div class="card my-5">
 					<div
 						class="card-header bg-danger text-center text-light font-weight-bold"

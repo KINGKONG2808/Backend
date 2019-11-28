@@ -28,31 +28,37 @@
 	<!-- B O D Y -->
 	<div id="main" class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<h1 class="mt-2"></h1>
-				<table class="table table-bordered table-striped table-condensed">
-					<thead class="thead-dark">
+			<h1 class="mt-2"></h1>
+			<table
+				class="table table-bordered table-striped table-condensed my-4">
+				<thead class="thead-light">
+					<tr>
+						<th>ID</th>
+						<th>Product Name</th>
+						<th>Price</th>
+						<th>Quality</th>
+						<th>Total Product</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="items" items="${giohang }">
 						<tr>
-							<th>ProductId</th>
-							<th>ProductName</th>
-							<th>Price</th>
-							<th>Quality</th>
+							<td>${items.productId }</td>
+							<td>${items.productName }</td>
+							<td>${items.price }</td>
+							<td>${items.quality }</td>
+							<td>${items.getTotalMoney()}</td>
 						</tr>
-					</thead>
-					<tbody>
-
-						<c:forEach var="items" items="${giohang }">
-							<tr>
-								<td>${items.productId }</td>
-								<td>${items.productName }</td>
-								<td>${items.price }</td>
-								<td>${items.quality }</td>
-							</tr>
-						</c:forEach>
-
-					</tbody>
-				</table>
-			</div>
+					</c:forEach>
+					<tr>
+						<td colspan="4" class="text-center"><b>Total Money</b></td>
+						<td><i>$ </i><b>${total}</b></td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="#" class="btn btn-danger btn-block my-4" data-toggle="modal" data-target="#modalSigninForm">
+					<i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;&nbsp;P A Y M E N T B I L L
+				</a>
 		</div>
 	</div>
 

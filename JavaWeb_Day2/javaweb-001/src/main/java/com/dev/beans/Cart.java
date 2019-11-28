@@ -1,13 +1,12 @@
 package com.dev.beans;
 
-import java.math.BigDecimal;
-
 public class Cart {
 	private Integer productId;
 	private String productName;
 	private String categoryName;
-	private BigDecimal price;
+	private Double price;
 	private Double quality;
+	private Double totalMoney;
 
 	public Integer getProductId() {
 		return productId;
@@ -33,11 +32,11 @@ public class Cart {
 		this.categoryName = categoryName;
 	}
 
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
@@ -49,4 +48,8 @@ public class Cart {
 		this.quality = quality;
 	}
 
+	public Double getTotalMoney() {
+		totalMoney = price * quality;
+		return totalMoney;
+	}
 }

@@ -24,10 +24,8 @@ import com.dev.entities.BillPost;
 
 @Controller
 public class HomeController {
-	@Autowired
-	PostRepository postRepository;
-	@Autowired
-	BillRepository billRepository;
+	@Autowired PostRepository postRepository;
+	@Autowired BillRepository billRepository;
 
 	@RequestMapping(value = { "/login" }, method = { RequestMethod.GET })
 	public String login(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response) {
@@ -67,20 +65,24 @@ public class HomeController {
 
 		// 2. tạo hoá đơn
 		Bill bill = new Bill();
-		bill.setName("Hoá đơn ngày " + new Date().toString());
+		bill.setName("Make bill on " + new Date().toString());
 
 		// 3. bổ sung sản phẩm vào hoá đơn.
+		Double kq = new Double(0);
+		
 		for (Cart cart : carts) {
 			BillPost billPost = new BillPost();
 			billPost.setProductId(cart.getProductId());
 			billPost.setPrice(cart.getPrice());
 			billPost.setQuality(cart.getQuality());
-
+			billPost.setTotal(cart.getTotalMoney());
+			kq+=cart.getTotalMoney();
 			bill.addBillPost(billPost);
 		}
 
 		// 4. lưu hoá đơn
 		billRepository.save(bill);
+		model.addAttribute("total", kq);
 
 		// trả về tên view.
 		return "giohang";

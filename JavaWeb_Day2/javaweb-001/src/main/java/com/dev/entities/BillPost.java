@@ -1,7 +1,5 @@
 package com.dev.entities;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,11 +14,14 @@ public class BillPost extends BaseEntity {
 	@Column(name = "product_id")
 	private Integer productId;
 
-	@Column(name = "price", precision = 13, scale = 2, nullable = true)
-	private BigDecimal price;
+	@Column(name = "price", nullable = false)
+	private Double price;
 
-	@Column(name = "quality")
+	@Column(name = "quality", nullable = false)
 	private Double quality;
+	
+	@Column(name = "total", nullable = true)
+	private Double total;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "bill_id")
@@ -34,11 +35,11 @@ public class BillPost extends BaseEntity {
 		this.productId = productId;
 	}
 
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
@@ -56,6 +57,14 @@ public class BillPost extends BaseEntity {
 
 	public void setBill(Bill bill) {
 		this.bill = bill;
+	}
+
+	public Double getTotal() {
+		return total;
+	}
+
+	public void setTotal(Double total) {
+		this.total = total;
 	}
 
 }

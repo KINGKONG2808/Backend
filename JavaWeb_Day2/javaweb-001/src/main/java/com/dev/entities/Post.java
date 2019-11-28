@@ -1,6 +1,5 @@
 package com.dev.entities;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,8 +13,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.springframework.data.annotation.CreatedDate;
+import com.dev.beans.FormatDate;
 
 @Entity
 @Table(name = "tbl_post")
@@ -36,8 +34,8 @@ public class Post extends BaseEntity {
 	@Column(name = "create_date", nullable = false)
 	private Date createdDate;
 
-	@Column(name = "price", precision = 13, scale = 2, nullable = false)
-	private BigDecimal price;
+	@Column(name = "price", nullable = false)
+	private Double price;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "post_category_id")
@@ -88,8 +86,8 @@ public class Post extends BaseEntity {
 		this.status = status;
 	}
 
-	public Date getCreatedDate() {
-		return createdDate;
+	public String getCreatedDate() {
+		return FormatDate.formatDateDtb(createdDate);
 	}
 
 	public void setCreatedDate(Date createdDate) {
@@ -104,11 +102,11 @@ public class Post extends BaseEntity {
 		this.category = category;
 	}
 
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
