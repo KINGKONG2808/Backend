@@ -31,10 +31,18 @@
 			<!-- P R O D U C T S -->
 			<div class="col-md-12">
 				<h1 class="font-weight-bold my-4 text-danger text-center">${product.category.name }</h1>
+				<a href="javascript:Blog.addToCart(${product.id});"
+					class="btn btn-danger btn-block my-3" style="font-size: 13px"> <i
+					class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Add to Cart
+				</a>
 				<div class="row my-4">
-					<h1>${product.title }</h1>
+					<h1 class="my-3">${product.title }</h1> <br>
 					${product.details }
 				</div>
+				<a href="javascript:Blog.addToCart(${product.id});"
+					class="btn btn-danger btn-block my-3" style="font-size: 13px"> <i
+					class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Add to Cart
+				</a>
 			</div>
 		</div>
 	</div>

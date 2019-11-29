@@ -1,9 +1,51 @@
 //summernote for function add post
 $(document).ready(function() {
 	$('#my-summernote').summernote();
-	$("#myInput").on("keyup", function() {
+	
+	// contact
+	$("#myInput-contact").on("keyup", function() {
 		var value = $(this).val().toLowerCase();
-		$("#myTable tr").filter(function() {
+		$("#myTable-contact tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+	
+	// category
+	$("#myInput-category").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable-category tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+	
+	// post
+	$("#myInput-post").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable-post tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+	
+	// postAttachment
+	$("#myInput-postAttachment").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable-postAttachment tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+	
+	// bill
+	$("#myInput-bill").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable-bill tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+	
+	// billPost
+	$("#myInput-billPost").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable-billPost tr").filter(function() {
 			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 		});
 	});

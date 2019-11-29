@@ -144,7 +144,7 @@
 						<div class="row">
 							<c:forEach var="product" items="${_products}">
 								<c:choose>
-									<c:when test="${product.category.id == 9 || product.category.id == 10 || product.category.id == 11 || product.category.id == 12 || product.category.id == 13 || product.category.id == 14 || product.category.id == 15 || product.category.id == 16}">
+									<c:when test="${product.category.id == 9 || product.category.id == 23 || product.category.id == 10 || product.category.id == 11 || product.category.id == 12 || product.category.id == 13 || product.category.id == 14 || product.category.id == 15 || product.category.id == 16}">
 										<div class="col-md-3 my-4">
 											<div class="card my-4">
 												<a

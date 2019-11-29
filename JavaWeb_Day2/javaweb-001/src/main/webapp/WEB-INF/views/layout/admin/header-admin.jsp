@@ -21,7 +21,7 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav mr-auto justify-content-center">
-				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/admin/home">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
 				<li class="nav-item"><a class="nav-link" href="#category">Category</a></li>
 				<li class="nav-item"><a class="nav-link" href="#post">Posts</a></li>

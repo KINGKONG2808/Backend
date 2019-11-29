@@ -33,6 +33,7 @@
 			</div>
 
 			<div class="col-md-10">
+			
 				<!-- contact -->
 				<div class="card my-5" id="contact">
 					<div
@@ -44,7 +45,7 @@
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for
 								full name, email or phone number:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-contact" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -56,7 +57,7 @@
 										<th>Action</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-contact">
 
 									<c:forEach var="contact" items="${contacts }">
 										<tr>
@@ -92,7 +93,7 @@
 						<div class="table-responsive">
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for category:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-category" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -102,7 +103,7 @@
 										<th>Status</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-category">
 
 									<c:forEach var="category" items="${categories }">
 										<tr>
@@ -128,7 +129,7 @@
 						<div class="table-responsive">
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for post:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-post" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -141,7 +142,7 @@
 										<th>Action</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-post">
 
 									<c:forEach var="post" items="${posts }">
 										<tr>
@@ -177,7 +178,7 @@
 						<div class="table-responsive">
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for post attachments:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-postAttachment" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -188,7 +189,7 @@
 										<th>Mime</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-postAttachment">
 
 									<c:forEach var="postAttachment" items="${postAttachments }">
 										<tr>
@@ -215,7 +216,7 @@
 						<div class="table-responsive">
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for bill list:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-bill" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -224,7 +225,7 @@
 										<th>Name</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-bill">
 
 									<c:forEach var="bill" items="${bills }">
 										<tr>
@@ -249,7 +250,7 @@
 						<div class="table-responsive">
 							<h3>Search in table</h3>
 							<p>Enter something in the input field to search the table for bill post:</p>
-							<input class="form-control my-4" id="myInput" type="text"
+							<input class="form-control my-4" id="myInput-billPost" type="text"
 								placeholder="Search..">
 							<table class="table table-bordered table-striped table-condensed">
 								<thead class="thead-dark">
@@ -262,7 +263,7 @@
 										<th>Total</th>
 									</tr>
 								</thead>
-								<tbody id="myTable">
+								<tbody id="myTable-billPost">
 
 									<c:forEach var="billPost" items="${billPosts }">
 										<tr>
